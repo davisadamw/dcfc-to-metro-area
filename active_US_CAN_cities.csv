@@ -1,0 +1,271 @@
+﻿Country,State/Province,City (incl. neighbour cities)
+Canada,Alberta,Calgary
+Canada,Alberta,Edmonton
+Canada,Alberta,Lethbridge
+Canada,Alberta,Red Deer
+Canada,Ontario,Hamilton
+Canada,Ontario,Kingston
+Canada,Ontario,Kitchener-Waterloo
+Canada,Ontario,London
+Canada,Ontario,Niagara Region
+Canada,Ontario,Ottawa
+Canada,Ontario,Toronto
+Canada,Ontario,Windsor
+Canada,Quebec,Gatineau
+Canada,Quebec,Montreal
+Canada,Quebec,Quebec City
+United States,Alabama,Auburn
+United States,Alabama,Birmingham
+United States,Alabama,Dothan
+United States,Alabama,Huntsville
+United States,Alabama,Mobile
+United States,Alabama,Montgomery
+United States,Alabama,Tuscaloosa
+United States,Alaska,Anchorage
+United States,Alaska,Fairbanks
+United States,Arizona,Flagstaff
+United States,Arizona,Phoenix
+United States,Arizona,Tucson
+United States,Arizona,Western Arizona
+United States,Arizona,Yuma
+United States,Arkansas,Fayetteville
+United States,Arkansas,Jonesboro
+United States,Arkansas,Little Rock
+United States,Arkansas,Texarkana
+United States,California,Bakersfield
+United States,California,Fresno
+United States,California,Inland Empire
+United States,California,Los Angeles
+United States,California,Modesto
+United States,California,Orange County
+United States,California,Palm Springs
+United States,California,Sacramento
+United States,California,San Diego
+United States,California,San Francisco
+United States,California,San Luis Obispo
+United States,California,Santa Barbara
+United States,California,Ventura
+United States,Colorado,Colorado Springs
+United States,Colorado,Denver
+United States,Colorado,Fort Collins
+United States,Colorado,Rockies
+United States,Connecticut,Connecticut
+United States,Delaware,Delaware
+United States,Delaware,Eastern Shore
+United States,Delaware,Philadelphia
+United States,District of Columbia,Washington D.C.
+United States,Florida,Central Atlantic Coast
+United States,Florida,Florida Keys
+United States,Florida,Fort Myers-Naples
+United States,Florida,Gainesville
+United States,Florida,Jacksonville
+United States,Florida,Miami
+United States,Florida,Ocala
+United States,Florida,Orlando
+United States,Florida,Panama City
+United States,Florida,Pensacola
+United States,Florida,Sarasota
+United States,Florida,Tallahassee
+United States,Florida,Tampa Bay
+United States,Georgia,Athens
+United States,Georgia,Atlanta
+United States,Georgia,Augusta
+United States,Georgia,Coastal Georgia
+United States,Georgia,Columbus
+United States,Georgia,Macon
+United States,Georgia,North Georgia
+United States,Georgia,Savannah-Hilton Head
+United States,Georgia,South Georgia
+United States,Hawaii,Big Island
+United States,Hawaii,Honolulu
+United States,Hawaii,Kauai
+United States,Hawaii,Maui
+United States,Idaho,Boise
+United States,Idaho,Coeur d'Alene
+United States,Idaho,Eastern Idaho
+United States,Illinois,Carbondale
+United States,Illinois,Champaign
+United States,Illinois,Chicago
+United States,Illinois,Peoria
+United States,Illinois,Quad Cities
+United States,Illinois,Rockford
+United States,Illinois,Springfield
+United States,Indiana,Bloomington
+United States,Indiana,Cincinnati
+United States,Indiana,Evansville
+United States,Indiana,Fort Wayne
+United States,Indiana,Indianapolis
+United States,Indiana,Louisville
+United States,Indiana,NW Indiana
+United States,Indiana,South Bend
+United States,Indiana,Terre Haute
+United States,Indiana,West Lafayette
+United States,Iowa,Ames
+United States,Iowa,Cedar Rapids
+United States,Iowa,Des Moines
+United States,Iowa,Dubuque
+United States,Iowa,Iowa City
+United States,Iowa,Sioux City
+United States,Iowa,Waterloo-Cedar Falls
+United States,Kansas,Lawrence
+United States,Kansas,Manhattan
+United States,Kansas,Topeka
+United States,Kansas,Wichita
+United States,Kentucky,Bowling Green
+United States,Kentucky,Cincinnati
+United States,Kentucky,Lexington
+United States,Kentucky,Louisville
+United States,Louisiana,Baton Rouge
+United States,Louisiana,Lafayette
+United States,Louisiana,Monroe
+United States,Louisiana,New Orleans
+United States,Louisiana,Shreveport
+United States,Maine,Greater Maine
+United States,Maine,Portland
+United States,Maryland,Baltimore-Maryland
+United States,Maryland,Eastern Shore
+United States,Maryland,Washington D.C.
+United States,Massachusetts,Boston
+United States,Massachusetts,Western MA
+United States,Massachusetts,Worcester
+United States,Michigan,Ann Arbor
+United States,Michigan,Detroit
+United States,Michigan,Flint
+United States,Michigan,Grand Rapids
+United States,Michigan,Kalamazoo
+United States,Michigan,Lansing
+United States,Michigan,Traverse City
+United States,Michigan,Tri-Cities
+United States,Minnesota,Duluth
+United States,Minnesota,Mankato
+United States,Minnesota,Minneapolis - St. Paul
+United States,Minnesota,Rochester
+United States,Minnesota,St Cloud
+United States,Mississippi,Golden Triangle
+United States,Mississippi,Gulfport-Biloxi
+United States,Mississippi,Hattiesburg
+United States,Mississippi,Jackson
+United States,Mississippi,Oxford
+United States,Missouri,Columbia
+United States,Missouri,Kansas City
+United States,Missouri,Springfield
+United States,Missouri,St Louis
+United States,Montana,Billings
+United States,Montana,Bozeman
+United States,Montana,Missoula
+United States,Nebraska,Lincoln
+United States,Nevada,Las Vegas
+United States,Nevada,Reno
+United States,New Hampshire,New Hampshire
+United States,New Jersey,New Jersey
+United States,New Mexico,Albuquerque
+United States,New Mexico,Las Cruces
+United States,New Mexico,Santa Fe
+United States,New York,NYC Suburbs
+United States,New York,New York City
+United States,New York,Upstate NY
+United States,North Carolina,Asheville
+United States,North Carolina,Boone
+United States,North Carolina,Charlotte
+United States,North Carolina,Eastern North Carolina
+United States,North Carolina,Fayetteville
+United States,North Carolina,Outer Banks
+United States,North Carolina,Piedmont Triad
+United States,North Carolina,Raleigh-Durham
+United States,North Carolina,Wilmington
+United States,North Dakota,Bismarck
+United States,North Dakota,Fargo
+United States,North Dakota,Grand Forks
+United States,Ohio,Akron
+United States,Ohio,Cincinnati
+United States,Ohio,Cleveland
+United States,Ohio,Columbus
+United States,Ohio,Dayton
+United States,Ohio,Toledo
+United States,Ohio,Youngstown
+United States,Oklahoma,Dallas
+United States,Oklahoma,Lawton
+United States,Oklahoma,Oklahoma City
+United States,Oklahoma,Stillwater
+United States,Oklahoma,Tulsa
+United States,Oregon,Central Oregon
+United States,Oregon,Eugene
+United States,Oregon,Portland
+United States,Oregon,Southern Oregon
+United States,Oregon,Willamette Valley
+United States,Pennsylvania,Erie
+United States,Pennsylvania,Greater Williamsport
+United States,Pennsylvania,Harrisburg
+United States,Pennsylvania,Johnstown-Altoona
+United States,Pennsylvania,Lancaster
+United States,Pennsylvania,Lehigh Valley
+United States,Pennsylvania,Philadelphia
+United States,Pennsylvania,Pittsburgh
+United States,Pennsylvania,Reading
+United States,Pennsylvania,State College
+United States,Pennsylvania,Wilkes-Barre Scranton
+United States,Pennsylvania,York-Gettysburg
+United States,Puerto Rico,Mayaguez
+United States,Puerto Rico,Ponce
+United States,Puerto Rico,San Juan
+United States,Rhode Island,Rhode Island
+United States,South Carolina,Charleston
+United States,South Carolina,Charlotte
+United States,South Carolina,Columbia
+United States,South Carolina,Florence
+United States,South Carolina,Greenville
+United States,South Carolina,Myrtle Beach
+United States,South Carolina,Savannah-Hilton Head
+United States,Tennessee,Chattanooga
+United States,Tennessee,Cookeville
+United States,Tennessee,Jackson
+United States,Tennessee,Knoxville
+United States,Tennessee,Memphis
+United States,Tennessee,Nashville
+United States,Tennessee,Tri-Cities
+United States,Texas,Abilene
+United States,Texas,Amarillo
+United States,Texas,Austin
+United States,Texas,Beaumont
+United States,Texas,College Station
+United States,Texas,Corpus Christi
+United States,Texas,Dallas
+United States,Texas,El Paso
+United States,Texas,Houston
+United States,Texas,Killeen
+United States,Texas,Laredo
+United States,Texas,Lubbock
+United States,Texas,Midland-Odessa
+United States,Texas,Nacogdoches
+United States,Texas,Rio Grande Valley
+United States,Texas,San Angelo
+United States,Texas,San Antonio
+United States,Texas,Texarkana
+United States,Texas,Tyler
+United States,Texas,Waco
+United States,Texas,Wichita Falls
+United States,Utah,Salt Lake City
+United States,Utah,Southern Utah
+United States,Vermont,Vermont
+United States,Virginia,Charlottesville-Harrisonburg
+United States,Virginia,Hampton Roads
+United States,Virginia,Richmond
+United States,Virginia,Roanoke
+United States,Virginia,Washington D.C.
+United States,Washington,Bellingham
+United States,Washington,Eastern Washington
+United States,Washington,Olympia
+United States,Washington,Peninsula and SW WA
+United States,Washington,Portland
+United States,Washington,Seattle
+United States,Washington,Spokane
+United States,Washington,Tacoma
+United States,West Virginia,Eastern WV
+United States,West Virginia,Western WV
+United States,Wisconsin,Duluth
+United States,Wisconsin,Eau Claire
+United States,Wisconsin,Green Bay
+United States,Wisconsin,La Crosse
+United States,Wisconsin,Madison
+United States,Wisconsin,Milwaukee
+United States,Wyoming,Wyoming
