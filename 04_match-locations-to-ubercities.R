@@ -29,7 +29,7 @@ chargers_alldata_county <- county_to_uber %>%
 chargers_alldata_ubercity <- chargers_alldata_county %>% 
   group_by(UberCity, UberCity2) %>% 
   summarize(across(POPESTIMATE2019:dcfc, sum), .groups = "drop") %>% 
-  mutate(across(charging_locations:dcfc, list(per_1000people = ~ . / POPESTIMATE2019 * 1000))) %>% 
+  mutate(across(charging_locations:dcfc, list(per_100kpeople = ~ . / POPESTIMATE2019 * 100000))) %>% 
   rename(UberCity_accuracy = UberCity,
          UberCity = UberCity2)
 
