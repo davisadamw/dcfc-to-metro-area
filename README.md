@@ -1,10 +1,12 @@
 # dcfc-to-metro-area
 Aggregate EV DC Fast Chargers to counties / Uber Cities
 
+# Geocoding (counties -> Uber Cities)
 Uber city boundaries in the US mostly follow county boundaries. Click through to individual cities here: https://www.uber.com/global/en/cities/
 
-# Uber cities geocoding result and information on geocoding accuracy can be found in Geocoding_Result directory
+Uber cities geocoding result and information on geocoding accuracy can be found in Geocoding_Result directory
 
+# Source data
 Source data for chargers from: https://afdc.energy.gov/fuels/electricity_locations.html
 
 County boundaries from https://www2.census.gov/geo/tiger/TIGER2019/COUNTY/tl_2019_us_county.zip
