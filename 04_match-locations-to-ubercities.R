@@ -1,5 +1,11 @@
 library(tidyverse)
-library(tidycensus)
+library(sf)
+
+# load county areas (whoops, doesn't live in the right directory ... will correct this if there need to be updates in the future)
+county_areas <- read_sf("~/GIS DataBase/tl_2019_us_county/tl_2019_us_county.shp") %>% 
+  select(GEOID, ALAND) %>% 
+  st_drop_geometry() %>% 
+  mutate(area_km2 = ALAND / 1e6, .keep = "unused")
 
 # load county-uber link, assign worst accuracy category to each group
 county_to_uber <- read_csv("Geocoding_Result/us_counties_uber.csv",
@@ -13,7 +19,10 @@ census_county_pops <- read_csv("Data/co-est2019-alldata.csv",
                                col_types = cols_only(STATE = "c", COUNTY = "c", 
                                                      STNAME = "c", CTYNAME = "c",
                                                      POPESTIMATE2019 = "i")) %>% 
-  mutate(GEOID = paste0(STATE, COUNTY), .keep = "unused")
+  # drop full state results
+  filter(COUNTY != "000") %>% 
+  mutate(GEOID = paste0(STATE, COUNTY), .keep = "unused") %>% 
+  inner_join(county_areas, by = "GEOID")
 
 # load county level charger totals, collapse per county
 county_chargers <- read_rds("Data/afdc_locations_with_county.rds") %>% 
@@ -23,13 +32,15 @@ county_chargers <- read_rds("Data/afdc_locations_with_county.rds") %>%
 chargers_alldata_county <- county_to_uber %>% 
   left_join(census_county_pops, by = "GEOID") %>% 
   left_join(county_chargers,    by = "GEOID") %>% 
-  drop_na(STNAME, CTYNAME, POPESTIMATE2019) %>% 
+  drop_na(STNAME, CTYNAME, POPESTIMATE2019, area_km2) %>% 
   mutate(across(charging_locations:dcfc, replace_na, 0))
 
 chargers_alldata_ubercity <- chargers_alldata_county %>% 
   group_by(UberCity, UberCity2) %>% 
   summarize(across(POPESTIMATE2019:dcfc, sum), .groups = "drop") %>% 
-  mutate(across(charging_locations:dcfc, list(per_100kpeople = ~ . / POPESTIMATE2019 * 100000))) %>% 
+  mutate(across(charging_locations:dcfc, 
+                list(per_100kpeople = ~ . / POPESTIMATE2019 * 100000,
+                     per_1000km2    = ~ . / area_km2 * 1000))) %>% 
   rename(UberCity_accuracy = UberCity,
          UberCity = UberCity2)
 
