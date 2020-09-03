@@ -26,7 +26,10 @@ census_county_pops <- read_csv("Data/co-est2019-alldata.csv",
 
 # load county level charger totals, collapse per county
 county_chargers <- read_rds("Data/afdc_locations_with_county.rds") %>% 
-  with_groups(GEOID, summarize, charging_locations = n(), level2 = sum(level2), dcfc = sum(dcfc))
+  with_groups(c(GEOID, CBSAFP, CSAFP), summarize, 
+              charging_locations = n(), 
+              level2 = sum(level2),
+              dcfc = sum(dcfc))
 
 # combine all the data per county
 chargers_alldata_county <- county_to_uber %>% 
@@ -53,3 +56,50 @@ chargers_alldata_ubercity %>%
   write_csv("Outputs/all_ubercities_chargerinfo.csv")
 uber_city_defs %>% 
   write_csv("Outputs/active_US_CAN_cities_chargerinfo.csv")
+
+
+# Run CBSA and CSA too ####
+
+# load CBSA/CSA names
+cbsa_csa_names <- read_delim("Data/core-based-statistical-areas-cbsas-and-combined-statistical-areas-csas.csv",
+                             delim = ";",
+                             col_types = cols_only(`CBSA Code`  = "c",
+                                                   `CSA Code`   = "c",
+                                                   `CBSA Title` = "c",
+                                                   `CSA Title`  = "c")) %>% 
+  rename(CBSAFP = `CBSA Code`,
+         CSAFP  = `CSA Code`,
+         CBSA   = `CBSA Title`,
+         CSA    = `CSA Title`) %>% 
+  distinct()
+
+# attach CBSA/CSA names to counties
+chargers_alldata_cbsacsa <- chargers_alldata_county %>% 
+  left_join(cbsa_csa_names, by = c("CBSAFP", "CSAFP")) %>% 
+  mutate(CBSA = replace_na(CBSA, "non-CBSA"),
+         CSA  = replace_na(CSA,  "non-CSA"))
+
+# summarize by State/CBSA and State/CSA and save
+chargers_alldata_cbsacsa %>% 
+  group_by(STNAME, CBSAFP, CBSA) %>% 
+  summarize(across(c(POPESTIMATE2019, area_km2, charging_locations:dcfc), sum), .groups = "drop") %>% 
+  mutate(across(charging_locations:dcfc, 
+                list(per_100kpeople = ~ . / POPESTIMATE2019 * 100000,
+                     per_1000km2    = ~ . / area_km2 * 1000))) %>% 
+  write_csv("Outputs/cbsa_chargerinfo.csv")
+
+chargers_alldata_cbsacsa %>% 
+  group_by(STNAME, CSAFP, CSA) %>% 
+  summarize(across(c(POPESTIMATE2019, area_km2, charging_locations:dcfc), sum), .groups = "drop") %>% 
+  mutate(across(charging_locations:dcfc, 
+                list(per_100kpeople = ~ . / POPESTIMATE2019 * 100000,
+                     per_1000km2    = ~ . / area_km2 * 1000))) %>%
+  write_csv("Outputs/csa_chargerinfo.csv")
+
+# might as well keep it at the county level as well
+chargers_alldata_cbsacsa %>% 
+  relocate(CBSAFP, CSAFP, CBSA, CSA, .after = CTYNAME) %>% 
+  mutate(across(charging_locations:dcfc, 
+                list(per_100kpeople = ~ . / POPESTIMATE2019 * 100000,
+                     per_1000km2    = ~ . / area_km2 * 1000))) %>% 
+  write_csv("Outputs/county_chargerinfo.csv")
